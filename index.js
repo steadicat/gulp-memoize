@@ -48,7 +48,6 @@ module.exports = function(stream) {
       gutil.log(gutil.colors.yellow('Recomputing'), gutil.colors.cyan(hash));
       // Recompute and save the results
       cache[hash] = [];
-      console.log(stream);
       stream.on('data', function(file) {
         gutil.log(gutil.colors.yellow('Recomputed file'), gutil.colors.cyan(file.path));
         cache[hash].push(file);
