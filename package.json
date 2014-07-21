@@ -1,0 +1,44 @@
+{
+  "name": "gulp-memoize",
+  "description": "",
+  "version": "0.0.1",
+  "homepage": "https://github.com/steadicat/gulp-memoize",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/steadicat/gulp-memoize.git"
+  },
+  "author": {
+    "name": "Stefano J. Attardi",
+    "url": "http://attardi.org/"
+  },
+  "main": "./index.js",
+  "keywords": [
+    "gulpplugin",
+    "conditional",
+    "cache",
+    "memoize",
+    "caching"
+    "if",
+    "remember"
+  ],
+  "dependencies": {
+    "gulp-match": "^0.1.0",
+    "through2": "^0.5.1"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/steadicat/gulp-memoize/issues"
+  }
+}
