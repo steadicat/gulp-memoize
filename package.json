@@ -1,7 +1,7 @@
 {
   "name": "gulp-memoize",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/steadicat/gulp-memoize",
   "repository": {
     "type": "git",

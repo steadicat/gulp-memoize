@@ -37,7 +37,7 @@ module.exports = function(stream) {
   }, function(cb) {
     var hash = getHash(buffer);
     if (cache[hash]) {
-      gutil.log(gutil.colors.yellow('Found cached hash'), gutil.colors.cyan(hash));
+      //gutil.log(gutil.colors.yellow('Found cached hash'), gutil.colors.cyan(hash));
       // Replay the last results
       cache[hash].forEach(function(file) {
         this.push(file);
@@ -45,16 +45,16 @@ module.exports = function(stream) {
       buffer = [];
       cb();
     } else {
-      gutil.log(gutil.colors.yellow('Recomputing'), gutil.colors.cyan(hash));
+      //gutil.log(gutil.colors.yellow('Recomputing'), gutil.colors.cyan(hash));
       // Recompute and save the results
       cache[hash] = [];
       stream.on('data', function(file) {
-        gutil.log(gutil.colors.yellow('Recomputed file'), gutil.colors.cyan(file.path));
+        //gutil.log(gutil.colors.yellow('Recomputed file'), gutil.colors.cyan(file.path));
         cache[hash].push(file);
         this.push(file);
       }.bind(this));
       stream.on('end', function() {
-        gutil.log(gutil.colors.yellow('Recompute done'), gutil.colors.cyan(hash));
+        //gutil.log(gutil.colors.yellow('Recompute done'), gutil.colors.cyan(hash));
         this.end();
         buffer = [];
         cb();
